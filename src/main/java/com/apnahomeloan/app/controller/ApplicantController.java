@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.apnahomeloan.app.model.Applicant;
-import com.apnahomeloan.app.serviceinterface.ApplicantServiceI;
+import com.apnahomeloan.app.serviceinterface.ServiceInterface;
 
 @RestController
 public class ApplicantController {
 
 	@Autowired
-	private ApplicantServiceI aps;
+	private ServiceInterface aps;
 	
 	@PostMapping("/Applicant")
 	public ResponseEntity<Applicant> saveApplicant(@Valid @RequestBody Applicant a){

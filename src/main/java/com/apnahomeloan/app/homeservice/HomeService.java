@@ -8,10 +8,10 @@ import org.springframework.stereotype.Service;
 
 import com.apnahomeloan.app.model.Applicant;
 import com.apnahomeloan.app.repository.ApplicantRepository;
-import com.apnahomeloan.app.serviceinterface.ApplicantServiceI;
+import com.apnahomeloan.app.serviceinterface.ServiceInterface;
 
 @Service
-public class HomeService implements ApplicantServiceI{
+public class HomeService implements ServiceInterface{
 
 	@Autowired
 	private ApplicantRepository apr;

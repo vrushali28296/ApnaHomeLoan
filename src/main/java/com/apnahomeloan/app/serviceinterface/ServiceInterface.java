@@ -4,9 +4,9 @@ import javax.validation.Valid;
 
 import com.apnahomeloan.app.model.Applicant;
 
-public interface ApplicantServiceI {
+public interface ServiceInterface {
 
-	void saveApplicant(@Valid Applicant a);
+	void saveApplicant( Applicant a);
 
 }
      
