@@ -19,11 +19,9 @@ public class ApplicantController {
 	private ServiceInterface aps;
 	
 	@PostMapping("/Applicant")
-	public ResponseEntity<Applicant> saveApplicant(@Valid @RequestBody Applicant a){
-		
-		aps.saveApplicant(a);
-		
+	public ResponseEntity<Applicant> saveApplicant(@Valid @RequestBody Applicant a)
+	{	
+		aps.saveApplicant(a);	
 		return new ResponseEntity<Applicant>(a,HttpStatus.OK);
-	}
-	
+	}	
 }
