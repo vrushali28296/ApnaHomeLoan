@@ -1,5 +1,7 @@
 package com.apnahomeloan.app.homeservice;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,9 +22,29 @@ public class EmployeeService implements EmployeeServiseI{
 	@Override
 	public Employee saveEmployee( Employee e) {
 
-
-		return null;
+		return	er.save(e);
+		
 	}
+
+
+
+	@Override
+	public List<Employee> getEmployee() {
+		List<Employee> list=er.findAll();
+		return list;
+	}
+
+
+
+	@Override
+	public void deleteEmployee(int employeeid) {
+		er.deleteById(employeeid);
+		
+	}
+
+
+
+	
 
 		
 
