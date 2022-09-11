@@ -1,5 +1,5 @@
 package com.apnahomeloan.app.homeservice;
 
-public class HomeService {
+public class HomeService implements ApplicantServiceI{
 
 }
