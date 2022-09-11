@@ -3,9 +3,10 @@ package com.apnahomeloan.app.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.apnahomeloan.app.model.Applicant;
+import com.apnahomeloan.app.model.Customer;
 
 @Repository
-public interface ApplicantRepository  extends JpaRepository<Applicant, Integer> {
+public interface CustomerRepositary extends JpaRepository<Customer, Integer>
+{
 
 }

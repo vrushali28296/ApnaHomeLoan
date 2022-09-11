@@ -9,20 +9,22 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.apnahomeloan.app.model.Employee;
-import com.apnahomeloan.app.serviceinterface.EmployeeServiseI;
+import com.apnahomeloan.app.model.Applicant;
+import com.apnahomeloan.app.serviceinterface.ServiceInterFace;
 
 
 @RestController
-public class EmployeeController {
+public class ApplicantController {
 
-	@Autowired private EmployeeServiseI esr;
-
-	@PostMapping("/Employee")
-	public ResponseEntity<Employee> saveEmployee(@Valid @RequestBody Employee e){
+	@Autowired
+	private ServiceInterFace aps;
 	
-								Employee	emp=esr.saveEmployee(e);
+	@PostMapping("/Applicant")
+	public ResponseEntity<Applicant> saveApplicant(@Valid @RequestBody Applicant a){
+		
+		aps.saveApplicant(a);
+		
+		return new ResponseEntity<Applicant>(a,HttpStatus.OK);
+	}
 	
-								return new ResponseEntity<>(emp,HttpStatus.OK);
 }
- }
