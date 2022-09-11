@@ -1,8 +1,4 @@
 package com.apnahomeloan.app.model;
-
-
-
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -35,5 +31,4 @@ public class Profession {
 	private String proffession_type;
 	@NotNull
 	private double annual_salary;
-	
 }
