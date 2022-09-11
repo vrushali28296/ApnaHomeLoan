@@ -18,10 +18,10 @@ import lombok.NoArgsConstructor;
 public class Cibil {
 	
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int csid;
+	private Integer csid;
 	@NotNull
 
-	private int csscore;
+	private Integer csscore;
 	@NotNull
 	private String csdatetime;
 	@NotNull
