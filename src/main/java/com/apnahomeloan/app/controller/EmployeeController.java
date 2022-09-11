@@ -1,5 +1,5 @@
 package com.apnahomeloan.app.controller;
 
-public class Employee {
+public class EmployeeController {
 
 }

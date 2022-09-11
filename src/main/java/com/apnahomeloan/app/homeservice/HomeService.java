@@ -1,5 +1,7 @@
 package com.apnahomeloan.app.homeservice;
 
-public class HomeService {
+import com.apnahomeloan.app.serviceinterface.EmployeeServiseI;
+
+public class HomeService implements EmployeeServiseI{
 
 }
