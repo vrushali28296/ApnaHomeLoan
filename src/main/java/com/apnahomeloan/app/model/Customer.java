@@ -17,7 +17,6 @@ import lombok.NoArgsConstructor;
 public class Customer 
 {
 	@Id
-	@NotNull
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer customer_id;
 	@NotNull
