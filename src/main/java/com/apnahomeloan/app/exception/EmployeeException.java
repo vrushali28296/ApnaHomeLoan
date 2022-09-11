@@ -1,5 +1,5 @@
 package com.apnahomeloan.app.exception;
 
-public class GlobalException {
+public class EmployeeException {
 
 }
