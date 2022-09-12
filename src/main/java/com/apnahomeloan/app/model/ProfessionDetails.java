@@ -21,10 +21,10 @@ public class ProfessionDetails {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@NotNull
+	
 	private Integer proffession_id;
-	@NotEmpty
-	private String Designation;
+	@NotNull
+	private String designation;
 	@NotEmpty
 	private String proffession_name;
 	@NotEmpty
