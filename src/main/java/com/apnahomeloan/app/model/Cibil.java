@@ -18,6 +18,7 @@ import lombok.NoArgsConstructor;
 public class Cibil {
 	
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@NotNull
 	private Integer csid;
 	@NotNull
 

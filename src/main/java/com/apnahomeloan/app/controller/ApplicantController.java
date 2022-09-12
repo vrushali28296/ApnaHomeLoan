@@ -10,20 +10,19 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.apnahomeloan.app.model.Applicant;
-import com.apnahomeloan.app.serviceinterface.ServiceInterface;
+import com.apnahomeloan.app.serviceinterface.ServiceInterFace;
+
 
 @RestController
 public class ApplicantController {
 
 	@Autowired
-	private ServiceInterface aps;
+	private ServiceInterFace aps;
 	
 	@PostMapping("/Applicant")
-	public ResponseEntity<Applicant> saveApplicant(@Valid @RequestBody Applicant a){
-		
-		aps.saveApplicant(a);
-		
+	public ResponseEntity<Applicant> saveApplicant(@Valid @RequestBody Applicant a)
+	{	
+		aps.saveApplicant(a);	
 		return new ResponseEntity<Applicant>(a,HttpStatus.OK);
-	}
-	
+	}	
 }
