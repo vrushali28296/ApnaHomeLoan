@@ -1,8 +1,17 @@
 package com.apnahomeloan.app.serviceinterface;
 
+
+import java.util.List;
+import javax.validation.Valid;
 import com.apnahomeloan.app.model.Applicant;
 
-public interface ServiceInterFace {
+public interface ServiceInterface
+{
 
-	void saveApplicant(Applicant a);
+public void saveApplicant(   Applicant a);
+
+public 	List<Applicant> getAllData();
+
+public	void deleteApplicant(int apid);
+
 }
