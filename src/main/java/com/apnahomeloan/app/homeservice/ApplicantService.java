@@ -10,10 +10,10 @@ import org.springframework.stereotype.Service;
 
 import com.apnahomeloan.app.model.Applicant;
 import com.apnahomeloan.app.repository.ApplicantRepository;
-import com.apnahomeloan.app.serviceinterface.ServiceInterface;
+import com.apnahomeloan.app.serviceinterface.ApplicantServise;
 
 @Service
-public class HomeService implements ServiceInterface{
+public class ApplicantService implements ApplicantServise{
 
 	@Autowired
 	private ApplicantRepository apr;
@@ -21,10 +21,7 @@ public class HomeService implements ServiceInterface{
 	@Override
 	public void saveApplicant(Applicant a) {
 		
-		 apr.save(a);
-		
-		
-		
+		 apr.save(a);	
 	}
 
 	@Override
@@ -37,10 +34,17 @@ public class HomeService implements ServiceInterface{
 	}
 
 	@Override
-	public void deleteApplicant(int apid) {
+	public void deleteApplicant(int applicant_id) {
 		
 		
-		apr.deleteById(apid);
+		apr.deleteById(applicant_id);
+		
+	}
+
+	@Override
+	public Applicant getApplicantBtId(int applicantid) {
+		 
+		return apr.findByApplicantid(applicantid);
 		
 	}
 

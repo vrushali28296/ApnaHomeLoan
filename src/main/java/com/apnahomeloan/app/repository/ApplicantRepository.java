@@ -8,4 +8,8 @@ import com.apnahomeloan.app.model.Applicant;
 @Repository
 public interface ApplicantRepository  extends JpaRepository<Applicant, Integer> {
 
+  public Applicant findByApplicantid(Integer applicantid );
+
+
+	
 }

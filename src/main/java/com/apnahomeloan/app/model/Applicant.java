@@ -1,9 +1,11 @@
 package com.apnahomeloan.app.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
@@ -19,18 +21,16 @@ import lombok.NoArgsConstructor;
 public class Applicant {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
-	private Integer apid;
+	private Integer applicantid;
   @NotNull
-	private String apname;
-  @NotNull
-	private String apaddress;
-  @Size(min =10,max=13)
-	private String apmobno;
+	private String applicant_name;
  @NotNull
-	private String apoccupation;
+	private String applicant_occupation;
   @Size(min =10,max=12)
-	private String appancard;
+	private String applicant_pancard;
   @Email
-	private String apemail;
+	private String applicant_email;
 	
+  @OneToOne(cascade =CascadeType.ALL)
+  private Cibil cibil;
 }
