@@ -10,6 +10,4 @@ public interface ApplicantRepository  extends JpaRepository<Applicant, Integer> 
 
   public Applicant findByApplicantid(Integer applicantid );
 
-
-	
 }

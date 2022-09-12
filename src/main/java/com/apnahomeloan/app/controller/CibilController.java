@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.apnahomeloan.app.model.Cibil;
-import com.apnahomeloan.app.serviceinterface.ApplicantServise;
+import com.apnahomeloan.app.serviceinterface.ApplicantServiceI;
 import com.apnahomeloan.app.serviceinterface.CibilServiceInterface;
 
 @RestController
@@ -20,7 +20,7 @@ public class CibilController {
 	private CibilServiceInterface csi;
 	
 	@Autowired
-	private ApplicantServise asi;
+	private ApplicantServiceI asi;
 	
 	@PostMapping("/Cibil/{cibilScore}/{applicant_id}")
 	public ResponseEntity<Cibil> saveCibil(@PathVariable int cibilScore,@PathVariable int applicant_id ){
@@ -33,7 +33,7 @@ public class CibilController {
 	@GetMapping("/getCibil")
 	public Integer  getcibil() {
 		
-			Integer cibil=csi.getcibil();
+			Integer cibil=csi.getcibil(); 
 			
 			return cibil;
 	}
