@@ -18,11 +18,11 @@ public class AccountDetails {
 
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@NotNull
-	private Integer acid;
+	private Integer account_id;
 	@NotNull
-	private String actype;
+	private String account_type;
 	@NotNull
-	private String acholdername;
+	private String account_holdername;
 	@NotNull
-	private String ifsccode;
+	private String ifsc_code;
 }

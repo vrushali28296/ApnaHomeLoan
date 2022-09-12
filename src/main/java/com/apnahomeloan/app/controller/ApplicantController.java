@@ -28,7 +28,7 @@ import com.apnahomeloan.app.serviceinterface.ApplicantServiceI;
 public class ApplicantController {
 
 	@Autowired
-<<<<<<< HEAD
+
 	private ServiceInterFace aps;
 	
 	@PostMapping("/Applicant")
@@ -38,7 +38,7 @@ public class ApplicantController {
 		return new ResponseEntity<Applicant>(a,HttpStatus.OK);
 	}	
 }
-=======
+
 	private ApplicantServiceI aps;
 	
 	@PostMapping("/Applicant")
