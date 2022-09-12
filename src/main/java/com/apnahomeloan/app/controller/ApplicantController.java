@@ -18,15 +18,12 @@ import org.springframework.web.bind.annotation.RestController;
 import com.apnahomeloan.app.model.Applicant;
 import com.apnahomeloan.app.serviceinterface.ApplicantServiceI;
 
-
-
 @RestController
 public class ApplicantController {
 
 	@Autowired
-
 	 ApplicantServiceI aps1;
-	
+
 	@PostMapping("/Applicant")
 	public ResponseEntity<Applicant> saveApplicant(@Valid @RequestBody Applicant a)
 	{	
@@ -56,6 +53,14 @@ public class ApplicantController {
     					aps1.deleteApplicant(apid);				
     					
     		return new ResponseEntity<>(HttpStatus.NO_CONTENT);			
+    }
+    
+    @GetMapping("/Applicant/{applicant_id}")
+    public ResponseEntity<Applicant> getApplicantById(@PathVariable int applicant_id){
+    	
+    						Applicant applicant=aps1.getApplicantBtId(applicant_id);
+    	
+    			return new ResponseEntity<Applicant>(applicant,HttpStatus.OK);			
     }
 }
 

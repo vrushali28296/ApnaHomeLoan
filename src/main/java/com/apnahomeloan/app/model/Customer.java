@@ -1,9 +1,11 @@
 package com.apnahomeloan.app.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -27,9 +29,7 @@ public class Customer
 	private String customer_name;
 	@NotNull
 	private String customer_gender;
-	@Email
-	@NotNull
-	private String customer_emailid;
+	
 	@NotNull
 	private String customer_dob;
 	@NotNull
@@ -42,8 +42,8 @@ public class Customer
 	@NotNull
 	private Double customer_totalLoanAmt;
 	
-//	@OneToOne
-//	private Cibil cibilScore;
+	@OneToOne(cascade = CascadeType.ALL)
+	private Applicant applicant;
 //	@OneToOne
 //	private AccountDetails accountDetails;
 //	@OneToOne

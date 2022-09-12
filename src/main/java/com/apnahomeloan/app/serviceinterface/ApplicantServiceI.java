@@ -14,4 +14,6 @@ public 	List<Applicant> getAllData();
 
 public	void deleteApplicant(int apid);
 
+public Applicant getApplicantBtId(int applicant_id);
+
 }

@@ -1,5 +1,6 @@
 package com.apnahomeloan.app.homeservice;
 
+
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -7,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.apnahomeloan.app.model.Applicant;
 import com.apnahomeloan.app.repository.ApplicantRepository;
 import com.apnahomeloan.app.serviceinterface.ApplicantServiceI;
+
 
 @Service
 public class ApplicantService implements ApplicantServiceI{
@@ -16,8 +18,8 @@ public class ApplicantService implements ApplicantServiceI{
 	@Override
 	public void saveApplicant(Applicant a) {
 		
+
 		apr.save(a);
-		
 		
 	}
 
@@ -31,12 +33,20 @@ public class ApplicantService implements ApplicantServiceI{
 	}
 
 	@Override
-	public void deleteApplicant(int apid) {
+	public void deleteApplicant(int applicantid) {
 		
 		
-		apr.deleteById(apid);
+		apr.deleteById(applicantid);
 		
 	}
+
+	@Override
+	public Applicant getApplicantBtId(int applicantid) {
+		 
+		return apr.findByApplicantid(applicantid);
+		
+	}
+
 
 
 
