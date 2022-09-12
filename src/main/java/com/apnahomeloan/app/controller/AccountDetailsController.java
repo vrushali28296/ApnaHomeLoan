@@ -56,6 +56,11 @@ public class AccountDetailsController {
 	}
 			
 		
+//
+//{
+//	  "account_type":"saving",
+//	  "account_holdername":"vaishalip",
+//	  "ifsc_code":"sbi123"
+//	}
 
-		
 

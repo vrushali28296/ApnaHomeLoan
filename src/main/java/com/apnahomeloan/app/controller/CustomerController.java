@@ -53,3 +53,18 @@ public class CustomerController
 			return new ResponseEntity(HttpStatus.NO_CONTENT);			
 		}
 }
+
+
+//
+//
+//{
+//	  "customer_age": 45,
+//	  "customer_name": "vk",
+//	  "customer_gender": "female",
+//	  "customer_emailid": "vk@gmail.com",
+//	  "customer_dob": "28/2/96",
+//	  "customer_address": "pune",
+//	  "customer_mobno": "9762065593",
+//	  "customer_proposedLoanAmt": "5000000",
+//	  "customer_totalLoanAmt": "10000000"
+//	}
