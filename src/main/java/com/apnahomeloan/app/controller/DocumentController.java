@@ -93,9 +93,18 @@ public class DocumentController {
 			@RequestPart(required = true , value="photo")MultipartFile photo,
 			@RequestPart(required = true , value="incometax")MultipartFile incometax,
 			@RequestPart(required = true , value="salaryslip")MultipartFile salaryslip,
-			@RequestPart(required = true , value="bankcheck")MultipartFile bankcheck,
-			@RequestBody Documents document)
+			@RequestPart(required = true , value="bankcheck")MultipartFile bankcheck
+			) throws IOException
 	{
+		Documents document= new Documents();
+		document.setAddressProof(addressProof.getBytes());
+		document.setPancard(pancard.getBytes());
+		document.setAadharcard(aadharcard.getBytes());
+		document.setSignature(signature.getBytes());
+		document.setPhoto(photo.getBytes());
+		document.setIncometax(incometax.getBytes());
+		document.setSalaryslip(salaryslip.getBytes());
+		document.setBankcheck(bankcheck.getBytes());
 		Documents documents=dsi.upadteDocuments(document,documentId);
 		return new ResponseEntity<Documents>(documents,HttpStatus.CREATED);
 	}
