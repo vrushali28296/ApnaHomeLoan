@@ -94,7 +94,6 @@ public class DocumentController {
 			@RequestPart(required = true , value="incometax")MultipartFile incometax,
 			@RequestPart(required = true , value="salaryslip")MultipartFile salaryslip,
 			@RequestPart(required = true , value="bankcheck")MultipartFile bankcheck,
-			@RequestPart(value="document")String doc,
 			@RequestBody Documents document)
 	{
 		Documents documents=dsi.upadteDocuments(document,documentId);
