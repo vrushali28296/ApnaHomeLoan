@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.apnahomeloan.app.model.Documents;
+import com.apnahomeloan.app.serviceinterface.DocumentServiceI;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @RestController
