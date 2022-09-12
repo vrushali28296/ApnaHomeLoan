@@ -2,6 +2,7 @@ package com.apnahomeloan.app.controller;
 
 import java.util.List;
 
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +27,7 @@ public class EmployeeController {
 	@Autowired private EmployeeServiseI esr;
 
 	@PostMapping("/Employee")
-	public ResponseEntity<Employee> saveEmployee(@Valid @RequestBody Employee e){
+	public ResponseEntity<Employee> save_Employee(@Valid @RequestBody Employee e){
 	
 								Employee emp=esr.saveEmployee(e);
 	
@@ -34,20 +35,20 @@ public class EmployeeController {
 }
  
 @GetMapping("/Employees")
-public ResponseEntity<List<Employee>> getEmployee()
+public ResponseEntity<List<Employee>> get_Employee()
 {
 	List<Employee> list=esr.getEmployee();
 	return new ResponseEntity<List<Employee>>(list,HttpStatus.OK);
 	
 }
 @PutMapping("/Employee")
-public ResponseEntity<Employee> updateEmployee(@RequestBody Employee e)
+public ResponseEntity<Employee> update_Employee(@RequestBody Employee e)
 {
 	Employee emp=esr.saveEmployee(e);
 	return new ResponseEntity<Employee>(emp,HttpStatus.OK);
 }
 @DeleteMapping("/Employee/{employeeid}")
-public ResponseEntity<Employee> deleteEmployee(@PathVariable int employeeid)
+public ResponseEntity<Employee> delete_Employee(@PathVariable int employeeid)
 {
 	esr.deleteEmployee(employeeid);
 	return new ResponseEntity<Employee>(HttpStatus.NO_CONTENT);
