@@ -32,6 +32,7 @@ public class ProfessionHomeService implements ProfessionServiceI{
 	@Override
 	public ProfessionDetails updateProfessionDetails(ProfessionDetails professiondetails, Integer professionId) {
 		
+		
 		return null;
 	}
 
