@@ -55,6 +55,10 @@ public class ApplicantController {
     	
     					aps.deleteApplicant(apid);
     	
+    					
+    					
+    					
+    					
     		return new ResponseEntity<>(HttpStatus.NO_CONTENT);			
     }
 }
