@@ -1,16 +1,15 @@
 package com.apnahomeloan.app.homeservice;
 
 import java.util.List;
-import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.apnahomeloan.app.model.Applicant;
 import com.apnahomeloan.app.repository.ApplicantRepository;
-import com.apnahomeloan.app.serviceinterface.ServiceInterFace;
+import com.apnahomeloan.app.serviceinterface.ApplicantServiceI;
 
 @Service
-public class HomeService implements ServiceInterFace{
+public class ApplicantService implements ApplicantServiceI{
 
 	@Autowired private ApplicantRepository apr;
 	

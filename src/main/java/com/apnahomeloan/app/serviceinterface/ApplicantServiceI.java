@@ -5,7 +5,7 @@ import java.util.List;
 import javax.validation.Valid;
 import com.apnahomeloan.app.model.Applicant;
 
-public interface ServiceInterface
+public interface ApplicantServiceI
 {
 
 public void saveApplicant(   Applicant a);
