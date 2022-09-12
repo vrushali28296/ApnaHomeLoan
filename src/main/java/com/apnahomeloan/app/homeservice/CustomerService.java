@@ -32,6 +32,10 @@ public class CustomerService implements CustomerServiceI
 	public Customer updateCustomer(Customer customer, Integer customer_id) 
 	{
 		
+<<<<<<< HEAD
+=======
+		
+>>>>>>> 60426f25ff443db62a16a9c00e0d7c4d5e65fd34
 		return null;
 	}
 
