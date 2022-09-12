@@ -17,14 +17,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.apnahomeloan.app.model.Applicant;
-import com.apnahomeloan.app.serviceinterface.ServiceInterFace;
+import com.apnahomeloan.app.serviceinterface.ApplicantServiceI;
 
 
 @RestController
 public class ApplicantController {
 
 	@Autowired
-	private ServiceInterFace aps;
+	private ApplicantServiceI aps;
 	
 	@PostMapping("/Applicant")
 	public ResponseEntity<Applicant> saveApplicant(@Valid @RequestBody Applicant a){
