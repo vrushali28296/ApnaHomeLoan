@@ -6,6 +6,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -33,7 +35,8 @@ public class Customer
 	@NotNull
 	private String customer_address;
 	@NotNull
-	private Long customer_mobno;
+	@Size(min =10,max=13)
+	private String customer_mobno;
 	@NotNull
 	private Double customer_proposedLoanAmt;
 	@NotNull
