@@ -68,3 +68,46 @@ public class CustomerController
 //	  "customer_proposedLoanAmt": "5000000",
 //	  "customer_totalLoanAmt": "10000000"
 //	}
+
+
+
+//
+//
+//{ "customer_age":30,
+//	 "customer_name":"vrushali",
+//	 "customer_gender":"female",
+//	  "customer_email":"vk@gmail.com", 
+//	  "customer_dob":"28/2/96",
+//	  "customer_address":"pune",
+//	 "customer_mobno":"9876543210",
+//	  "customer_proposedLoanAmt":"500000", 
+//	 "customer_totalLoanAmt":"800000",
+//		"applicant":{
+//	     
+//	      "applicant_name":"vk",
+//	      "applicant_occupation":"developer",
+//	      "applicant_pancard":"pancard1234",
+//	      "applicant_email":"vk99@gamil.com",
+//	      "cibil":{"cibilScore":600,
+//	               "cibilScoreDateTime":"282222",
+//	               "cibilStatus":"invalid",
+//	               "cibilRemark":"bad"}
+//	    			},
+//	 	"accountDetails":{ "account_type":"saving",
+//	 						"account_holdername":"vrushalik",
+//	 						"ifsc_code" : "sbi1234"
+//					},
+//	 	"propertyDetails":{ "property_type":"xyz",
+//	                       "property_area":"500sqqft",
+//	                       "property_price":"555555",
+//	                       "property_address":"pune"
+//	      				
+//	    			},
+//	 	"profession":{"designation":"junior",
+//	                  "proffession_name":"it",
+//	                  "proffession_type":"itt",
+//	                  "annual_salary":600000
+//	    }
+//	}
+//	  
+

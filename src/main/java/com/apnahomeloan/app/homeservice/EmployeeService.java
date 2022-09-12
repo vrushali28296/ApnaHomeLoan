@@ -14,40 +14,34 @@ import com.apnahomeloan.app.repository.EmployeeRepository;
 import com.apnahomeloan.app.serviceinterface.EmployeeServiseI;
 
 @Service
-public class EmployeeService implements EmployeeServiseI{
+public class EmployeeService implements EmployeeServiseI {
 
-	@Autowired private EmployeeRepository er;
-
-	
+	@Autowired
+	private EmployeeRepository er;
 
 	@Override
-	public Employee saveEmployee( Employee e) {
+	public Employee saveEmployee(Employee e) {
 
-		return	er.save(e);
-		
+		return er.save(e);
+
 	}
-
-
 
 	@Override
 	public List<Employee> getEmployee() {
-		List<Employee> list=er.findAll();
+		List<Employee> list = er.findAll();
 		return list;
 	}
-
-
 
 	@Override
 	public void deleteEmployee(int employeeid) {
 		er.deleteById(employeeid);
-		
+
 	}
-	public Employee updateDetails(Employee employee,Integer employeeid)
-	{
-		Optional<Employee> emp=er.findById(employeeid);
-		if(emp.isPresent())
-		{
-			Employee e=emp.get();
+
+	public Employee updateDetails(Employee employee, Integer employeeid) {
+		Optional<Employee> emp = er.findById(employeeid);
+		if (emp.isPresent()) {
+			Employee e = emp.get();
 			e.setEmployeename(employee.getEmployeename());
 			e.setEmployeeusername(employee.getEmployeeusername());
 			e.setEmployeepassword(employee.getEmployeepassword());
@@ -58,28 +52,4 @@ public class EmployeeService implements EmployeeServiseI{
 		}
 		return null;
 	}
-
-
-
-	
-
-		
-
-	
-
-
-
-	
-
-	
-
-
-
-	
-
-
-
-	
-	
-	
 }

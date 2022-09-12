@@ -33,3 +33,5 @@ public class Applicant {
   @OneToOne(cascade =CascadeType.ALL)
   private Cibil cibil;
 }
+
+//"applicantid": ,
