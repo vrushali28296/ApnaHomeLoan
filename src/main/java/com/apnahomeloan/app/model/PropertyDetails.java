@@ -16,21 +16,21 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Validated
+
 @Entity
 public class PropertyDetails {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@NotNull
+	
 	private Integer property_ID;
 	@NotEmpty
 	private String property_type;
-	@NotEmpty
+	@NotNull
 	private double property_area;
-	@NotEmpty
+	@NotNull
 	private double property_price;
-	@NotEmpty
-	private byte property_documents;
+//	@NotEmpty
+//	private byte property_documents;
 	@NotEmpty
 	private String property_address;
 
