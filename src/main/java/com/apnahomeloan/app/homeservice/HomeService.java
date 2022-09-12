@@ -10,14 +10,16 @@ import com.apnahomeloan.app.serviceinterface.ServiceInterFace;
 @Service
 public class HomeService implements ServiceInterFace{
 
-	@Autowired private ApplicantRepository apr;
-	
+	 @Autowired private ApplicantRepository apr;
 	@Override
 	public void saveApplicant(Applicant a) {
-		
 		apr.save(a);
-		
 		
 	}
 
-}
+	
+		
+	}
+
+
+
