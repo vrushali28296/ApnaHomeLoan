@@ -57,8 +57,8 @@ public class DocumentService implements DocumentServiceI{
 		Optional<Documents>op=dr.findById(documentId);
 		if (op.isPresent())
 		{
-		
-			Documents document1= new Documents();
+			Documents document1=op.get();
+			
 			document1.setAddressProof(document.getAddressProof());
 			document1.setPancard(document.getPancard());
 			document1.setAadharcard(document.getAadharcard());
