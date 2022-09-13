@@ -55,7 +55,7 @@ public class ApplicantController {
     		return new ResponseEntity<>(HttpStatus.NO_CONTENT);			
     }
     
-    @GetMapping("/Applicant/{applicant_id}")
+    @GetMapping("/Applicant/{applicantid}")
     public ResponseEntity<Applicant> getApplicantById(@PathVariable int applicant_id){
     	
     						Applicant applicant=aps1.getApplicantBtId(applicant_id);
