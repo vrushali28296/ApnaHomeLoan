@@ -1,6 +1,7 @@
 package com.apnahomeloan.app.homeservice;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,9 +28,20 @@ public class AccountDetailsService implements AccountDetailsI {
 	}
 
 	@Override
-	public AccountDetails updateAccount(AccountDetails account, Integer acid) {
+	public AccountDetails updateAccount(AccountDetails account, Integer acid) 
+	{
+		Optional<AccountDetails> ac=adr.findById(acid);
+		if(ac.isPresent())
+		{
+			AccountDetails a=ac.get();
+			a.setAccount_holdername(account.getAccount_holdername());
+			a.setAccount_type(account.getAccount_type());
+			a.setIfsc_code(account.getIfsc_code());
+			return adr.save(a);
+		}
 	
 		return null;
+		
 	}
 
 	@Override

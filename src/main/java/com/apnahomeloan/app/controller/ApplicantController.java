@@ -22,45 +22,43 @@ import com.apnahomeloan.app.serviceinterface.ApplicantServiceI;
 public class ApplicantController {
 
 	@Autowired
-	 ApplicantServiceI aps1;
+	ApplicantServiceI aps1;
 
-	@PostMapping("/Applicant")
-	public ResponseEntity<Applicant> saveApplicant(@Valid @RequestBody Applicant a)
-	{	
-		aps1.saveApplicant(a);	
-		return new ResponseEntity<Applicant>(a,HttpStatus.OK);
-	}	
-	
-    @GetMapping("/Applicants")
-	public ResponseEntity<List<Applicant>> getApplicant(){
-		
-			List<Applicant> list=aps1.getAllData();
-			
-		return new ResponseEntity<List<Applicant>>(list,HttpStatus.OK);
+	@PostMapping("/saveApplicant")
+	public ResponseEntity<Applicant> saveApplicant(@Valid @RequestBody Applicant a) {
+		aps1.saveApplicant(a);
+		return new ResponseEntity<Applicant>(a, HttpStatus.OK);
 	}
-    
-    @PutMapping("/Applicant")
-    public ResponseEntity<Applicant> updateApplicant(@RequestBody Applicant a){
-    	
-    							aps1.saveApplicant(a);
-    							
-    		return new ResponseEntity<Applicant>(a,HttpStatus.CREATED);					
-    }
-    
-    @DeleteMapping("/Applicant/{apid}")
-    public ResponseEntity<Applicant> deleteApplicant(@PathVariable int apid){
-    	
-    					aps1.deleteApplicant(apid);				
-    					
-    		return new ResponseEntity<>(HttpStatus.NO_CONTENT);			
-    }
-    
-    @GetMapping("/Applicant/{applicantid}")
-    public ResponseEntity<Applicant> getApplicantById(@PathVariable int applicant_id){
-    	
-    						Applicant applicant=aps1.getApplicantBtId(applicant_id);
-    	
-    			return new ResponseEntity<Applicant>(applicant,HttpStatus.OK);			
-    }
-}
 
+	@GetMapping("/getApplicants")
+	public ResponseEntity<List<Applicant>> getApplicant() {
+
+		List<Applicant> list = aps1.getAllData();
+
+		return new ResponseEntity<List<Applicant>>(list, HttpStatus.OK);
+	}
+
+	@PutMapping("/updateApplicant")
+	public ResponseEntity<Applicant> updateApplicant(@RequestBody Applicant a) {
+
+		aps1.saveApplicant(a);
+
+		return new ResponseEntity<Applicant>(a, HttpStatus.CREATED);
+	}
+
+	@DeleteMapping("/deleteApplicant/{apid}")
+	public ResponseEntity<Applicant> deleteApplicant(@PathVariable int apid) {
+
+		aps1.deleteApplicant(apid);
+
+		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+	}
+
+	@GetMapping("/singleApplicant/{applicant_id}")
+	public ResponseEntity<Applicant> getApplicantById(@PathVariable int applicant_id) {
+
+		Applicant applicant = aps1.getApplicantBtId(applicant_id);
+
+		return new ResponseEntity<Applicant>(applicant, HttpStatus.OK);
+	}
+}

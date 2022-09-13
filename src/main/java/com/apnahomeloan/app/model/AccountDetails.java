@@ -27,3 +27,10 @@ public class AccountDetails {
 	@NotNull
 	private String ifsc_code;
 }
+
+//
+//{
+//	  "account_type":"savingAccount111",
+//	  "account_holdername":"vaishalip",
+//	  "ifsc_code":"sbi123"
+//	}
