@@ -43,8 +43,8 @@ public class CustomerService implements CustomerServiceI
 			ct.setCustomer_gender(c.getCustomer_gender());
 			ct.setCustomer_mobno(c.getCustomer_mobno());
 			ct.setCustomer_name(c.getCustomer_name());
-			ct.setCustomer_proposedLoanAmt(c.getCustomer_proposedLoanAmt());
-			ct.setCustomer_totalLoanAmt(c.getCustomer_totalLoanAmt());
+//			ct.setCustomer_proposedLoanAmt(c.getCustomer_proposedLoanAmt());
+//			ct.setCustomer_totalLoanAmt(c.getCustomer_totalLoanAmt());
 			ct.setAccountDetails(c.getAccountDetails());
 			ct.setApplicant(c.getApplicant());
 			ct.setDocuments(c.getDocuments());

@@ -37,10 +37,7 @@ public class Customer
 	@NotNull
 	@Size(min =10,max=13)
 	private String customer_mobno;
-	@NotNull
-	private Double customer_proposedLoanAmt;
-	@NotNull
-	private Double customer_totalLoanAmt;
+	
 	
 	@OneToOne(cascade = CascadeType.ALL)
 	private Applicant applicant;
@@ -53,6 +50,9 @@ public class Customer
 	private Documents documents;
 	@OneToOne
 	private ProfessionDetails profession;
+	
+	@OneToOne
+	private LoanDetails loanDetails;
 }
 
 
@@ -100,6 +100,6 @@ public class Customer
                   "annual_salary":600000
     }
 }
-  
+
  * 
  */
