@@ -8,4 +8,5 @@ import com.apnahomeloan.app.model.ProfessionDetails;
 @Repository
 public interface ProfessionRepo extends JpaRepository<ProfessionDetails, Integer> {
 
+	public ProfessionDetails findAllByProffessionid(Integer proffessionid);
 }

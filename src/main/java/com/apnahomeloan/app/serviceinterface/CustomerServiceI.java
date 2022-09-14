@@ -11,8 +11,8 @@ public interface CustomerServiceI
 
 	public List<Customer> getCustomers();
 
-	public Customer updateCustomer(Customer customer, Integer customer_id);
+	public Customer updateCustomer(Customer customer, Integer customerid);
 
-	public void deleteCustomer(Integer customer_id);
+	public void deleteCustomer(Integer customerid);
 
 }
