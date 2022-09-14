@@ -16,5 +16,5 @@ public interface EmployeeServiseI {
 	Employee saveEmployee(@Valid Employee e);
 
 
-	void deleteEmployee(int employeeid2);
+	void deleteEmployee(int employeeid);
 }

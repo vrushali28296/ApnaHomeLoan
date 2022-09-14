@@ -45,18 +45,18 @@ public class ProfessionController {
 		
 	}
 	
-	@PutMapping(value = "/updateProfessionDetails/{proffession_id}")
-	public ResponseEntity<ProfessionDetails> updateProfession(@RequestBody ProfessionDetails professiondetails,  @PathVariable Integer proffession_id){
+	@PutMapping(value = "/updateProfessionDetails/{proffessionid}")
+	public ResponseEntity<ProfessionDetails> updateProfession(@RequestBody ProfessionDetails professiondetails,  @PathVariable Integer proffessionid){
 		
-	ProfessionDetails profession=	professionservice.updateProfessionDetails(professiondetails, proffession_id);
+	ProfessionDetails profession=	professionservice.updateProfessionDetails(professiondetails, proffessionid);
 	
 	return new ResponseEntity<ProfessionDetails>(profession, HttpStatus.CREATED);
 		
 	}
 	
-	@DeleteMapping(value = "/deleteProfessionDetails/{proffession_id}")
-	public ResponseEntity<ProfessionDetails> deleteProfession(@PathVariable Integer proffession_id){
-		professionservice.deleteprofession(proffession_id);
+	@DeleteMapping(value = "/deleteProfessionDetails/{proffessionid}")
+	public ResponseEntity<ProfessionDetails> deleteProfession(@PathVariable Integer proffessionid){
+		professionservice.deleteprofession(proffessionid);
 		
 		return new ResponseEntity<ProfessionDetails>(HttpStatus.NO_CONTENT);
 		

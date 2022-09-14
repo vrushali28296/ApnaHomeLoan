@@ -22,7 +22,7 @@ public class PropertyDetails {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	
-	private Integer property_ID;
+	private Integer propertyID;
 	@NotEmpty
 	private String property_type;
 	@NotNull

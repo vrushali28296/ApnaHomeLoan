@@ -7,5 +7,6 @@ import com.apnahomeloan.app.model.AccountDetails;
 
 @Repository
 public interface AccountDetailsRepository extends JpaRepository<AccountDetails,Integer> {
-
+	
+public AccountDetails  findAllByAccountId(int accountid);
 }
