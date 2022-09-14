@@ -22,7 +22,7 @@ public class Customer
 {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Integer customer_id;
+	private Integer customerid;
 	@NotNull
 	private Integer customer_age;
 	@NotNull

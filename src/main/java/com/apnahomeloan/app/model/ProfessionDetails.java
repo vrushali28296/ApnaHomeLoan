@@ -22,7 +22,7 @@ public class ProfessionDetails {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	
-	private Integer proffession_id;
+	private Integer proffessionid;
 	@NotNull
 	private String designation;
 	@NotEmpty

@@ -19,7 +19,7 @@ public class AccountDetails {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@NotNull
-	private Integer account_id;
+	private Integer accountId;
 	@NotNull
 	private String account_type;
 	@NotNull

@@ -12,8 +12,8 @@ public	PropertyDetails savePropertyDetails(@Valid PropertyDetails propertydetail
 
 public List<PropertyDetails> getpropertydetails();
 
-public PropertyDetails updatepropertydetails(PropertyDetails propertydetails, Integer property_ID);
+public PropertyDetails updatepropertydetails(PropertyDetails propertydetails, Integer propertyID);
 
-public void deletepropertydetails(Integer property_ID);
+public void deletepropertydetails(Integer propertyID);
 
 }
