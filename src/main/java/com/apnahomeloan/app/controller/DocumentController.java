@@ -39,8 +39,8 @@ public class DocumentController {
 			@RequestPart(required = true , value="photo")MultipartFile photo,
 			@RequestPart(required = true , value="incometax")MultipartFile incometax,
 			@RequestPart(required = true , value="salaryslip")MultipartFile salaryslip,
-			@RequestPart(required = true , value="bankcheck")MultipartFile bankcheck,
-			@RequestPart(value="document")String document
+			@RequestPart(required = true , value="bankcheck")MultipartFile bankcheck
+			//@RequestPart(value="document")String document
 			) throws IOException 
 	{
 		Documents d=new Documents();
@@ -54,8 +54,8 @@ public class DocumentController {
 		d.setBankcheck(bankcheck.getBytes());
 		
 		ObjectMapper om= new ObjectMapper();
-		Documents documents=om.readValue(document, Documents.class);
-				d.setDocumentId(documents.getDocumentId());
+		//Documents documents=om.readValue(document, Documents.class);
+				//d.setDocumentId(documents.getDocumentId());
 		
 	
 				dsi.saveDocuments(d);
